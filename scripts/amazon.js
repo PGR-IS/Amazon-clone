@@ -76,3 +76,6 @@ function updateCartDisplay(){
     document.querySelector(".js-cart-quantity")
         .innerHTML = cartQuantity;
 }
+// Update cart quantity default display on the first page
+document.querySelector(".js-cart-quantity")
+  .innerHTML = JSON.parse(localStorage.getItem("cart")).length || 0;
